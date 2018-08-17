@@ -1,0 +1,63 @@
+{
+    "title": "尹自强.Note",
+    "description": "尹自强.Note",
+    "author": "尹自强",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "plugins": [
+        "-sharing",
+        "-highlight",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "anchor-navigation-ex",
+        "splitter",
+        "github",
+        "sitemap",
+        "tbfed-pagefooter",
+        "prism",
+        "alerts",
+        "donate",
+        "copy-code-button",
+        "advanced-emoji",
+        "baidu-tongji"
+    ],
+    "pluginsConfig": {
+        "fontsettings": {
+            "theme": "white",
+            "family": "sans",
+            "size": 1
+        },
+        "anchor-navigation-ex": {
+            "multipleH1": true,
+            "showLevel": true
+        },
+        "github": {
+            "url": "https://github.com/554393109"
+        },
+        "sitemap": {
+            "hostname": "http://note.yinziqiang.com"
+        },
+        "tbfed-pagefooter": {
+            "copyright": "&copy 尹自强",
+            "modify_label": "文件修订时间",
+            "modify_format": "YYYY-MM-DD HH:mm:ss"
+        },
+        "donate": {
+            "wechat": "/assets/donate_wechat.jpg",
+            "alipay": "/assets/donate_alipay.jpg",
+            "title": "",
+            "button": "打赏",
+            "alipayText": "支付宝打赏",
+            "wechatText": "微信打赏"
+        },
+        "baidu-tongji": {
+            "token": "5ee6cc423b317ce12202de00f0a9e1d7"
+        }
+    },
+    "links": {
+        "sidebar": {
+            "作者GitHub": "https://github.com/554393109"
+        }
+    }
+}
