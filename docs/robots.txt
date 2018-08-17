@@ -1,0 +1,2 @@
+# robots.txt
+Sitemap: http://note.yinziqiang.com/sitemap.xml
