@@ -20,7 +20,8 @@
         "donate",
         "copy-code-button",
         "advanced-emoji",
-        "baidu-tongji"
+        "baidu-tongji",
+        "expandable-chapters-small"
     ],
     "pluginsConfig": {
         "fontsettings": {
@@ -53,7 +54,8 @@
         },
         "baidu-tongji": {
             "token": "5ee6cc423b317ce12202de00f0a9e1d7"
-        }
+        },
+        "expandable-chapters-small": {}
     },
     "links": {
         "sidebar": {
