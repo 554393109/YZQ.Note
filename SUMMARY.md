@@ -5,5 +5,5 @@
   * [GitBook1](chapter/GitBook.md#1)
   * [GitBook2](chapter/GitBook.md#2)
 
-* [常用软件](chapter/Software.md)
+* [常用工具](chapter/Tools.md)
 * [个人履历](chapter/bio.md)
