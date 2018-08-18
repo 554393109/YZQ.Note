@@ -115,7 +115,7 @@ npm install -g gitbook-cli
 ```
 
 ## calibre
-> GitBook 导出PDF
+> GitBook 导出PDF、EPUB、MOBI
 
 > <https://calibre-ebook.com/>
 

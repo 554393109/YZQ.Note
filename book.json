@@ -6,7 +6,6 @@
     "gitbook": "3.2.3",
     "plugins": [
         "-sharing",
-        "-highlight",
         "-lunr",
         "-search",
         "search-pro",
@@ -15,13 +14,12 @@
         "github",
         "sitemap",
         "tbfed-pagefooter",
-        "prism",
         "alerts",
         "donate",
         "copy-code-button",
         "advanced-emoji",
         "baidu-tongji",
-        "expandable-chapters-small"
+        "expandable-chapters"
     ],
     "pluginsConfig": {
         "fontsettings": {
@@ -55,7 +53,7 @@
         "baidu-tongji": {
             "token": "5ee6cc423b317ce12202de00f0a9e1d7"
         },
-        "expandable-chapters-small": {}
+        "expandable-chapters": {}
     },
     "links": {
         "sidebar": {

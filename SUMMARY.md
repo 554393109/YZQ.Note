@@ -2,8 +2,9 @@
 
 * [在线笔记](README.md)
 * [GitBook](chapter/GitBook.md)
-  * [GitBook1](chapter/GitBook.md#1)
-  * [GitBook2](chapter/GitBook.md#2)
+  * [常用插件](chapter/GitBook.md#常用插件)
+  * [常见问题](chapter/GitBook.md#常见问题)
+  * [常用命令](chapter/GitBook.md#常用命令)
 
 * [常用工具](chapter/Tools.md)
 * [个人履历](chapter/bio.md)
