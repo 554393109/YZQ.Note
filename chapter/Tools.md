@@ -111,7 +111,7 @@
 
 ## GitBook
 ```text
-npm install -g gitbook-cli
+> npm install -g gitbook-cli
 ```
 
 ## calibre
