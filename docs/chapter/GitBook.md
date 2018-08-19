@@ -4,20 +4,20 @@
 
 # 常用插件
 
-| 插件名             | 功能           |
-|:---------------------------------|:---------------------------|
-|[search-pro][01]         |支持中文搜索        |
-|[anchor-navigation-ex][02]    |页内标题锚点&跳转顶部    |
-|[splitter][03]          |左侧菜单宽度拖拽      |
-|[github][04]           |github右上图标跳转     |
-|[sitemap][05]           |生成站点地图        |
-|[tbfed-pagefooter][06]      |页脚显示版权和修订时间   |
-|[alerts][07]           |美化区块消息        |
-|[donate][08]           |打赏            |
-|[copy-code-button][09]      |代码栏复制按钮       |
-|[advanced-emoji][10]       |Emoji表情          |
-|[baidu-tongji][11]        |百度统计          |
-|[expandable-chapters][12]     |左侧菜单一级节点折叠    |
+| 插件名          | 功能                                      |
+|:---------------------------|:---------------------------------------------------------------------------------|
+|[search-pro][01]      |支持中文搜索                                   |
+|[anchor-navigation-ex][02] |页内标题锚点&跳转顶部                               |
+|[splitter][03]       |左侧菜单宽度拖拽                                 |
+|[github][04]        |github右上图标跳转                                |
+|[sitemap][05]        |生成站点地图                                   |
+|[tbfed-pagefooter][06]   |页脚显示版权和修订时间                              |
+|[alerts][07]        |美化区块消息                                   |
+|[donate][08]        |打赏                                       |
+|[copy-code-button][09]   |代码栏复制按钮                                  |
+|[advanced-emoji][10]    |Emoji表情                                     |
+|[baidu-tongji][11]     |百度统计                                     |
+|[expandable-chapters][12]  |左侧菜单一级节点折叠                               |
 
 [01]: https://plugins.gitbook.com/plugin/search-pro
 [02]: https://plugins.gitbook.com/plugin/anchor-navigation-ex
