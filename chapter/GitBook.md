@@ -244,7 +244,7 @@ Markdown will dictates _most_ of your **book's structure**
 # 常见问题
 **生成静态网页错误**
 > 执行build命令时，Error: ENOENT: no such file or directory  
-> 解决方案：cd C:\Users\{Administrator}\.gitbook\versions\3.2.3\lib\output\website\  
+> 解决方案：cd C:\Users\\{Administrator}\\.gitbook\versions\3.2.3\lib\output\website\  
 > 修改copyPluginAssets.js文件，fs.copyDir的参数，第112行【confirm: true】->【confirm: false】  
 
 ---
