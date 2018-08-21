@@ -225,6 +225,7 @@ Markdown will dictates _most_ of your **book's structure**
 |[advanced-emoji][10]    |Emoji表情                                     |
 |[baidu-tongji][11]     |百度统计                                     |
 |[expandable-chapters][12]  |左侧菜单一级节点折叠                               |
+|[echarts][13]        |百度Echarts图表                                 |
 
 [01]: https://plugins.gitbook.com/plugin/search-pro
 [02]: https://plugins.gitbook.com/plugin/anchor-navigation-ex
@@ -238,6 +239,7 @@ Markdown will dictates _most_ of your **book's structure**
 [10]: https://plugins.gitbook.com/plugin/advanced-emoji
 [11]: https://plugins.gitbook.com/plugin/baidu-tongji
 [12]: https://plugins.gitbook.com/plugin/expandable-chapters
+[13]: https://plugins.gitbook.com/plugin/echarts
 
 ---
 
