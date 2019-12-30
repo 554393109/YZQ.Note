@@ -32,7 +32,7 @@ test.md
 bin/*
 ```
 
-**GitBookt特殊文件**
+## GitBookt特殊文件 ##
 | 文件      | 功能              |
 | :---      | :-------------------------------|
 |book.json    |配置               |
@@ -280,9 +280,9 @@ Markdown will dictates _most_ of your **book's structure**
 // 生成静态网页
 > gitbook build ./ ./docs --debug
 
-// 导出PDF、EPUB、MOBI
-> gitbook pdf ./ ./{file_name}.pdf
-> gitbook epub ./ ./{file_name}.epub
-> gitbook mobi ./ ./{file_name}.mobi
+// 导出PDF、EPUB、MOBI`
+> gitbook pdf ./ ./pdfs/{file_name}.pdf
+> gitbook epub ./ ./epubs/{file_name}.epub
+> gitbook mobi ./ ./mobis/{file_name}.mobi
 
 ```
