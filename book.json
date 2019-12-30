@@ -10,7 +10,7 @@
         "-search",
         "search-pro",
         "anchor-navigation-ex",
-        "splitter",
+        "splitter",    
         "github",
         "sitemap",
         "tbfed-pagefooter",
@@ -19,7 +19,8 @@
         "copy-code-button",
         "advanced-emoji",
         "baidu-tongji",
-        "expandable-chapters"
+        "expandable-chapters",
+        "-icp"
     ],
     "pluginsConfig": {
         "fontsettings": {
@@ -39,7 +40,7 @@
         },
         "tbfed-pagefooter": {
             "copyright": "&copy 尹自强",
-            "modify_label": "文件修订时间",
+            "modify_label": "<a id='link_icp' href='http://www.beian.miit.gov.cn/' target='blank'>粤ICP备</a>文件修订时间",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "donate": {
@@ -53,11 +54,18 @@
         "baidu-tongji": {
             "token": "5ee6cc423b317ce12202de00f0a9e1d7"
         },
-        "expandable-chapters": {}
+        "expandable-chapters": {},
+        "icp": {
+            "number": "粤ICP备18161097号-1",
+            "link": "http://www.beian.miit.gov.cn/"
+        }
     },
     "links": {
         "sidebar": {
             "作者GitHub": "https://github.com/554393109"
         }
+    },
+    "styles": {
+        "website": "styles/yzq.css"
     }
 }
