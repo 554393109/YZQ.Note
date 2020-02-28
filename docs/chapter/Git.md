@@ -2,7 +2,14 @@
 
 ---
 
+# 版本管理流程
+
+<a href="../assets/git_flow.jpg" title="点击预览" target="_blank"><img src="../assets/git_flow.jpg" style="zoom:100%" alt="版本管理流程"></a>
+
+---
+
 # 常用命令
+
 ```text
 // 在当前目录初始化为Git代码库
 > git init
@@ -42,12 +49,10 @@
 // 添加当前目录的所有文件到暂存区
 > git add .
 
-
-
-
 ```
 
 **名词**
+
 * master 默认开发分支
 * origin: 默认远程版本库
 * Index / Stage：暂存区

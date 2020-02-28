@@ -3,6 +3,7 @@
 ---
 
 # Node.js
+
 > <https://nodejs.org/zh-cn/>
 
 ---
@@ -10,9 +11,11 @@
 # Redis
 
 ## Redis
+
 > <https://redis.io/>
 
 ## Redis Desktop Manager
+
 > Reids 可视化管理端
 
 > <https://redisdesktop.com/>
@@ -22,9 +25,11 @@
 # Memcached
 
 ## Memcached
+
 > <http://memcached.org/>
 
 ## MemCacheD Manager
+
 > Memcached 可视化管理端
 
 > <http://memcached-manager.software.informer.com/>
@@ -34,9 +39,11 @@
 # MongoDB
 
 ## MongoDB
+
 > <https://www.mongodb.com/>
 
 ## MongoVUE
+
 > MongoDB 可视化管理端
 
 > <http://mongovue.software.informer.com/>
@@ -46,30 +53,37 @@
 # Team
 
 ## Git
+
 > <https://git-scm.com/>
 
 ## TortoiseGit
+
 > <https://tortoisegit.org/>
 
 ## SVN
+
 > <http://subversion.apache.org/>
 
 ## TortoiseSVN
+
 > <https://tortoisesvn.net/>
 
 ---
 
 # ZooKeeper
+
 > <http://zookeeper.apache.org/>
 
 ---
 
 # Erlang
+
 > <http://www.erlang.org/>
 
 ---
 
 # RabbitMQ
+
 > 消息队列
 
 > <http://www.rabbitmq.com/>
@@ -77,6 +91,7 @@
 ---
 
 # Everything
+
 > 文件搜索
 
 > <http://www.voidtools.com/>
@@ -86,9 +101,11 @@
 # Visual Studio
 
 ## Visual Studio Code
+
 > <https://code.visualstudio.com/>
 
 ## Visual Studio X
+
 > <https://visualstudio.microsoft.com/>
 
 ---
@@ -96,11 +113,13 @@
 # Java
 
 ## JDK
+
 > <http://www.oracle.com/technetwork/java/javase/downloads/index.html>
 
 ---
 
 # CodeSmith
+
 > 代码生成
 
 > <http://www.codesmithtools.com/>
@@ -110,11 +129,13 @@
 # GitBook
 
 ## GitBook
+
 ```text
 > npm install -g gitbook-cli
 ```
 
 ## calibre
+
 > GitBook 导出PDF、EPUB、MOBI
 
 > <https://calibre-ebook.com/>
@@ -122,6 +143,7 @@
 ---
 
 # MarkdownPad
+
 > Markdown编辑器
 
 > <http://markdownpad.com/>
@@ -129,11 +151,13 @@
 ---
 
 # Postman
+
 > <https://www.getpostman.com/>
 
 ---
 
 # Rapid Environment Editor
+
 > 系统环境变量编辑器
 
 > <https://www.rapidee.com/en/about>
@@ -143,6 +167,7 @@
 # 压缩工具
 
 ## WinRAR
+
 > <https://www.rarlab.com/>
 
 ```text
@@ -162,11 +187,13 @@ c9ffbc159bf2640ad5d9b88f8fa9d9cbf2b7e5b022a21938465244
 ```
 
 ## 7-Zip
+
 > <https://www.7-zip.org/>
 
 ---
 
 # Beyond Compare
+
 > 文本比对
 
 > <http://www.scootersoftware.com/>
@@ -183,4 +210,21 @@ NisHFBTcWJS0sC5BTFwrtfLEE9lEwz2bxHQpWJiu12ZeKpi+7oUSqebX+
 ```
 
 # FlashFXP
+
 > FTP客户端
+
+# 包管理工具
+
+## Nuget
+
+> .NET的Microsoft开发平台的包管理器  
+> <https://www.nuget.org/>
+
+## NPM
+
+> <https://www.npmjs.com/>
+
+## webpack
+
+> <http://webpack.github.io/>  
+> <https://www.webpackjs.com/>

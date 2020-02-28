@@ -18,21 +18,25 @@
 ```
 
 ## 静态文件和图片
+
 静态文件是在SUMMARY.md中未列出的文件。除非被忽略，否则所有静态文件都将复制到输出路径。
 
 ## 忽略文件和文件夹
+
 GitBook将读取【.gitignore】、【.bookignore】和【.ignore】文件，以获取要过滤的文件和文件夹。这些文件中的格式遵循.gitignore的规则：
+
 ```text
 # 通过井号注释
- 
+
 # 忽略test.md文件
 test.md
- 
+
 # 忽略bin目录下全部文件
 bin/*
 ```
 
-## GitBookt特殊文件 ##
+## GitBookt特殊文件
+
 | 文件      | 功能              |
 | :---      | :-------------------------------|
 |book.json    |配置               |
@@ -42,6 +46,7 @@ bin/*
 |LANGS.md   |多语言目录              |
 
 ## book.json
+
 GitBook允许您使用灵活的配置自定义您的电子书。
 
 这些选项在book.json文件中指定。对于不熟悉JSON语法的作者，您可以使用JSONlint等工具验证语法。
@@ -62,6 +67,7 @@ GitBook允许您使用灵活的配置自定义您的电子书。
 
 **gitbook**  
 应该使用的GitBook版本。使用[SemVer](https://semver.org/)规范，并接受类似于【>=3.0.0】的条件
+
 ```json
 "gitbook" : "3.2.3",
 "gitbook" : ">=3.0.0"
@@ -69,12 +75,14 @@ GitBook允许您使用灵活的配置自定义您的电子书。
 
 **language**  
 Gitbook使用的语言, 版本2.6.4中可选的语言如下：
+
 ```text
 en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, uk, vi, zh-hans, zh-tw
 ```
 
 **links**  
 在左侧导航栏添加链接信息
+
 ```json
 {
     "links": {
@@ -87,6 +95,7 @@ en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, 
 
 **root**  
 包含所有图书文件的根文件夹的路径， book.json 文件除外。
+
 ```json
 {
     "root" : "./docs",
@@ -118,9 +127,11 @@ en, ar, bn, cs, de, en, es, fa, fi, fr, he, it, ja, ko, no, pl, pt, ro, ru, sv, 
 |pdf.margin.left   |左边界（默认值是 62）          |
 
 ## README.md
+
 此文件是简单的电子书介绍，可以把您所制作的电子书做一下简单的描述.
 
 ## SUMMARY.md
+
 GitBook 使用 SUMMARY.md 文件来定义本书的章节和子章节的结构。 SUMMARY.md 文件用于生成本书的目录。
 
 SUMMARY.md 的格式是一个链接列表。链接的标题将作为章节的标题，链接的目标是该章节文件的路径。
@@ -134,10 +145,12 @@ SUMMARY.md 的格式是一个链接列表。链接的标题将作为章节的标
     * [We love feedback](part2/feedback_please.md)
     * [Better tools for authors](part2/better_tools.md)
 ```
+
 每章都有一个专用页面（part#/README.md），并分为子章节。
 
 **锚点**  
 目录中的章节可以使用锚点指向文件的特定部分。
+
 ```md
 # SUMMARY.md
 * [第一章](part1/README.md)
@@ -150,6 +163,7 @@ SUMMARY.md 的格式是一个链接列表。链接的标题将作为章节的标
 
 **部分**  
 目录可以分为以标题或水平线 ---- 分隔的部分：
+
 ```md
 # SUMMARY.md
 * [第一章](part1/README.md)
@@ -161,25 +175,30 @@ SUMMARY.md 的格式是一个链接列表。链接的标题将作为章节的标
 ----
 * [Last part without title](part3/title.md)
 ```
+
 Parts 只是章节组，没有专用页面，但根据主题，它将在导航中显示。
 
 ## GLOSSARY.md
+
 允许您指定要显示为注释的术语及其各自的定义。根据这些术语，GitBook 将自动构建索引并突出显示这些术语。
 
 GLOSSARY.md 的格式是 h2 标题的列表，以及描述段落：
+
 ```md
 ## Term
 Definition for this term
- 
+
 ## Another term
 With it's definition, this can contain bold text
 and all other kinds of inline markup ...
 ```
 
 ## LANGS.md
+
 GitBook支持使用多语言来构建书本。
 
 按照GitBook的标准格式，每个语言应该作为一个子目录，命名为LANGS.md的文件应该遵循下面的格式并出现在仓库的根目录下：
+
 ```md
 * [英语](en/)
 * [法语](fr/)
@@ -187,6 +206,7 @@ GitBook支持使用多语言来构建书本。
 ```
 
 ## 普通章节.md
+
 **Markdown语法**  
 默认情况下，GitBook的大多数文件都使用Markdown语法。GitBook推荐使用这种语法。所使用的语法类似于[GitHub Flavored Markdown syntax](https://guides.github.com/features/mastering-markdown/)。
 
@@ -195,13 +215,14 @@ GitBook支持使用多语言来构建书本。
 每编写一个.md文件，不要忘了在【SUMMARY.md】文件中添加一条记录
 
 *普通章节内容示例：*
+
 ```md
 # Title of the chapter
 This is a great introduction.
- 
+
 ## 第一节
 Markdown will dictates _most_ of your **book's structure**
- 
+
 ## 第二节
 Markdown will dictates _most_ of your **book's structure**
 ```
@@ -209,6 +230,7 @@ Markdown will dictates _most_ of your **book's structure**
 ---
 
 # 常用插件
+
 以下插件本书中皆有用到
 
 | 插件名          | 功能                                      |
@@ -243,15 +265,8 @@ Markdown will dictates _most_ of your **book's structure**
 
 ---
 
-# 常见问题
-**生成静态网页错误**
-> 执行build命令时，Error: ENOENT: no such file or directory  
-> 解决方案：cd C:\Users\\{Administrator}\\.gitbook\versions\3.2.3\lib\output\website\  
-> 修改copyPluginAssets.js文件，fs.copyDir的参数，第112行【confirm: true】->【confirm: false】  
-
----
-
 # 常用命令
+
 ```text
 // 列出gitbook所有的命令
 > gitbook help
@@ -286,3 +301,11 @@ Markdown will dictates _most_ of your **book's structure**
 > gitbook mobi ./ ./mobis/{file_name}.mobi
 
 ```
+
+---
+
+# 常见问题
+
+ **【生成静态网页错误】**执行build命令时，Error: ENOENT: no such file or directory
+> 解决方案：cd C:\Users\\{Administrator}\\.gitbook\versions\3.2.3\lib\output\website\  
+> 修改copyPluginAssets.js文件，fs.copyDir的参数，第112行【confirm: true】->【confirm: false】  
