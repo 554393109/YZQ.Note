@@ -40,7 +40,7 @@
         },
         "tbfed-pagefooter": {
             "copyright": "&copy 尹自强",
-            "modify_label": "<a id='link_icp' href='http://www.beian.miit.gov.cn/' target='blank'>粤ICP备18161097号-1</a>文件修订时间",
+            "modify_label": "<a id='link_icp' href='http://www.beian.miit.gov.cn/' target='blank'>粤ICP备18161097号</a>文件修订时间",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
         },
         "donate": {
