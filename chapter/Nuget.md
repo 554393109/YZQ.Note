@@ -75,8 +75,8 @@ NuGet.Server站点运行后，就可以使用nuget push命令添加包，前提�
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/554393109/UnifiedPaySDK/</projectUrl>
-    <iconUrl>https://qrpay.pos.cn/favicon.ico</iconUrl>
-    <icon>static\icon.ico</icon>
+    <iconUrl>https://qrpay.pos.cn/favicon.png</iconUrl>
+    <icon>static\icon.png</icon>
     <description>描述</description>
     <releaseNotes>此版本包中所作更改的说明</releaseNotes>
     <copyright>Copyright 2020</copyright>
@@ -90,7 +90,7 @@ NuGet.Server站点运行后，就可以使用nuget push命令添加包，前提�
     </dependencies>
   </metadata>
   <files>
-    <file src="icon.ico" target="static\icon.ico" />
+    <file src="icon.png" target="static\icon.png" />
   </files>
 </package>
 ```
