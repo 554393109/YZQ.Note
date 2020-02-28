@@ -127,19 +127,17 @@ NuGet.Server站点运行后，就可以使用nuget push命令添加包，前提�
 
 # 相关资源
 
-```text
-// 官网
-https://www.nuget.org/
-
-// 创建包
-https://docs.microsoft.com/zh-cn/nuget/create-packages/creating-a-package
-
-// NuGet CLI
-https://docs.microsoft.com/zh-cn/nuget/reference/nuget-exe-cli-reference
-
-// 支持多个.NET版本
-https://docs.microsoft.com/zh-cn/nuget/create-packages/supporting-multiple-target-frameworks
-
-// NuGet 常见问题
-https://docs.microsoft.com/zh-cn/nuget/resources/nuget-faq
-```
+> 官网  
+> <https://www.nuget.org/>
+>
+> 创建包  
+> <https://docs.microsoft.com/zh-cn/nuget/create-packages/creating-a-package>
+>
+> NuGet CLI  
+> <https://docs.microsoft.com/zh-cn/nuget/reference/nuget-exe-cli-reference>
+>
+> 支持多个.NET版本  
+> <https://docs.microsoft.com/zh-cn/nuget/create-packages/supporting-multiple-target-frameworks>
+>
+> NuGet 常见问题  
+> <https://docs.microsoft.com/zh-cn/nuget/resources/nuget-faq>
