@@ -128,7 +128,8 @@ NuGet.Server站点运行后，就可以使用nuget push命令添加包，前提�
 # 相关资源
 
 > 官网  
-> <https://www.nuget.org/>
+> <https://www.nuget.org/>  
+> <https://docs.microsoft.com/zh-cn/nuget/>
 >
 > 创建包  
 > <https://docs.microsoft.com/zh-cn/nuget/create-packages/creating-a-package>
