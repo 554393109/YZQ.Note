@@ -137,6 +137,9 @@ NuGet.Server站点运行后，就可以使用nuget push命令添加包，前提�
 > NuGet CLI  
 > <https://docs.microsoft.com/zh-cn/nuget/reference/nuget-exe-cli-reference>
 >
+> nuspec文件  
+> <https://docs.microsoft.com/zh-cn/nuget/reference/nuspec>
+>
 > 支持多个.NET版本  
 > <https://docs.microsoft.com/zh-cn/nuget/create-packages/supporting-multiple-target-frameworks>
 >
