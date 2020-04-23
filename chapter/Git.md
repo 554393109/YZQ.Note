@@ -53,8 +53,8 @@
 
 **名词**
 
-* master 默认开发分支
-* origin: 默认远程版本库
+* master：默认开发分支
+* origin：默认远程版本库
 * Index / Stage：暂存区
 * Workspace：工作区
 * Repository：仓库区（或本地仓库）
