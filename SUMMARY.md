@@ -18,6 +18,10 @@
   * [常用命令](chapter/Nuget.md#常用命令)
   * [相关资源](chapter/Nuget.md#相关资源)
 
+* [网站Console](chapter/SiteConsole.md)
+  * [微信开发文档](chapter/SiteConsole.md#微信开发文档)
+  * [中国天气](chapter/SiteConsole.md#中国天气)
+
 * [常用工具](chapter/Tools.md)
 
 * [个人履历](chapter/bio.md)
