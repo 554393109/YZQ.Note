@@ -37,14 +37,15 @@ ENTRYPOINT ["dotnet", "CySoft.WxAPI.dll"]
 ```bash
 # 构建镜像
 # docker build -f {Dockerfile文件目录:Dockerfile} -t {镜像名称(限定小写)}:{版本号} .
-> docker build -f Dockerfile_Release -t cysoft.wxapi:1.0.211018 .
+> docker build -f Dockerfile_Release -t cysoft.wxapi:1.0.211019 .
 
 # 启动容器，-d在后台以守护形式运行容器，-it交互形式运行容器
 # docker run --name {容器名称} --network {网络模式:bridge/host/none} -it -p {对外端口}:{内部端口} {镜像名称(限定小写)}:{版本号}
-> docker run --name CySoft.WxAPI.1 -it -p 61000:61000 cysoft.wxapi:1.0.211018
-
+> docker run --name CySoft.WxAPI.1 -it -p 61000:61000 cysoft.wxapi:1.0.211019
 # 启动容器，使用host模式（仅支持Linux主机），不需要指定端口映射
-> docker run --name CySoft.WxAPI.1 --network host -it cysoft.wxapi:1.0.211018
+> docker run --name CySoft.WxAPI.1 --network host -it cysoft.wxapi:1.0.211019
+# 启动容器，挂载宿主机物理目录
+> docker run -p 61111:80 -v /D/Conf_WxAPI:/app/Conf -v /D/Log_WxAPI:/app/Log --name CySoft.WxAPI.1 -itd --privileged=true cysoft.wxapi:1.0.211019
 
 # 查看运行容器
 > docker ps -a
@@ -67,3 +68,6 @@ ENTRYPOINT ["dotnet", "CySoft.WxAPI.dll"]
 >
 > benjamin杨 博客园  
 > <https://www.cnblogs.com/benjamin77/category/1186577.html>
+>
+> 菜鸟教程  
+> <https://www.runoob.com/docker/docker-command-manual.html>
