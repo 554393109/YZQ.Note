@@ -43,9 +43,27 @@ ENTRYPOINT ["dotnet", "CySoft.WxAPI.dll"]
 # docker run --name {容器名称} --network {网络模式:bridge/host/none} -it -p {对外端口}:{内部端口} {镜像名称(限定小写)}:{版本号}
 > docker run --name CySoft.WxAPI.1 -it -p 61000:61000 cysoft.wxapi:1.0.211018
 
-# 启动容器，使用host模式，不需要指定端口映射
+# 启动容器，使用host模式（仅支持Linux主机），不需要指定端口映射
 > docker run --name CySoft.WxAPI.1 --network host -it cysoft.wxapi:1.0.211018
 
 # 查看运行容器
 > docker ps -a
 ```
+
+---
+
+# 备注
+
+* host网络模式仅支持Linux主机，并且不支持Docker for Mac，Docker for Windows或Docker EE for Windows Server。
+
+* 
+
+---
+
+# 相关资源
+
+> 官网  
+> <https://www.docker.com/>  
+>
+> benjamin杨 博客园  
+> <https://www.cnblogs.com/benjamin77/category/1186577.html>
