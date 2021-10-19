@@ -14,6 +14,6 @@ $('.sidebar, .Catalog-box').remove();$('#art-content').removeClass('content');$(
 
 ```javascript
 // 在华南区块保留广东，移除其他省份
-$('.conMidtab').find('.conMidtab2:eq(2),.conMidtab2:eq(0)').remove();
+$('.conMidtab').find('.conMidtab2:eq(2),.conMidtab2:eq(0)').remove();$('.lqcontentBoxheader,.weather_li,.weather_li_head,.locationSearch,.footer').remove();
 
 ```
