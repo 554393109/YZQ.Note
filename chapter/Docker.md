@@ -53,11 +53,49 @@ ENTRYPOINT ["dotnet", "CySoft.WxAPI.dll"]
 
 ---
 
+# 常用镜像
+
+``` bash
+# Postgres SQL
+> docker pull postgres
+> docker run --name PostgresSQL -e POSTGRES_PASSWORD=123456 -p 5432:5432 -itd postgres
+
+# nginx
+> docker pull nginx
+
+# Redis
+> docker pull redis
+
+# busybox【集成了三百多个最常用Linux命令和工具的软件】
+> docker pull busybox
+
+# RabbitMQ
+> docker pull rabbitmq
+
+# Memcached
+> docker pull memcached
+
+# Mysql
+> docker pull mysql
+
+# Consul
+> docker pull consul
+
+# Ubuntu
+> docker pull ubuntu
+
+# Zookeeper
+> docker pull zookeeper
+
+# MongoDB
+> docker pull mongo
+```
+
+---
+
 # 备注
 
 * host网络模式仅支持Linux主机，并且不支持Docker for Mac，Docker for Windows或Docker EE for Windows Server。
-
-* 
 
 ---
 
@@ -65,6 +103,9 @@ ENTRYPOINT ["dotnet", "CySoft.WxAPI.dll"]
 
 > 官网  
 > <https://www.docker.com/>  
+>
+> Docker Hub  
+> <https://hub.docker.com/>
 >
 > benjamin杨 博客园  
 > <https://www.cnblogs.com/benjamin77/category/1186577.html>

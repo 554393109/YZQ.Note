@@ -25,6 +25,8 @@
 * [Docker](chapter/Docker.md)
   * [Dockerfile](chapter/Docker.md#Dockerfile)
   * [常用命令](chapter/Docker.md#常用命令)
+  * [常用镜像](chapter/Docker.md#常用镜像)
+  * [相关资源](chapter/Docker.md#相关资源)
 
 * [常用工具](chapter/Tools.md)
 

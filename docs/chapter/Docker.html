@@ -403,6 +403,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6.3" data-path="Docker.html">
+            
+                <a href="Docker.html#常用镜像">
+            
+                    
+                    常用镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="Docker.html">
+            
+                <a href="Docker.html#相关资源">
+            
+                    
+                    相关资源
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -479,7 +505,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#dockerfile"><b>1. </b>Dockerfile</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b>2. </b>&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#&#x5907;&#x6CE8;"><b>3. </b>&#x5907;&#x6CE8;</a></li><li><span class="title-icon "></span><a href="#&#x76F8;&#x5173;&#x8D44;&#x6E90;"><b>4. </b>&#x76F8;&#x5173;&#x8D44;&#x6E90;</a></li></ul></div><a href="#dockerfile" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p><b style="font-size: 2em">Docker</b></p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#dockerfile"><b>1. </b>Dockerfile</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x547D;&#x4EE4;"><b>2. </b>&#x5E38;&#x7528;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x955C;&#x50CF;"><b>3. </b>&#x5E38;&#x7528;&#x955C;&#x50CF;</a></li><li><span class="title-icon "></span><a href="#&#x5907;&#x6CE8;"><b>4. </b>&#x5907;&#x6CE8;</a></li><li><span class="title-icon "></span><a href="#&#x76F8;&#x5173;&#x8D44;&#x6E90;"><b>5. </b>&#x76F8;&#x5173;&#x8D44;&#x6E90;</a></li></ul></div><a href="#dockerfile" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p><b style="font-size: 2em">Docker</b></p>
 <hr>
 <h1 id="dockerfile"><a name="dockerfile" class="anchor-navigation-ex-anchor" href="#dockerfile"><i class="fa fa-link" aria-hidden="true"></i></a>1. Dockerfile</h1>
 <pre><code class="lang-text"># &#x7236;&#x955C;&#x50CF;
@@ -524,21 +550,56 @@ ENTRYPOINT [&quot;dotnet&quot;, &quot;CySoft.WxAPI.dll&quot;]
 &gt; docker ps <span class="hljs-_">-a</span>
 </code></pre>
 <hr>
-<h1 id="&#x5907;&#x6CE8;"><a name="&#x5907;&#x6CE8;" class="anchor-navigation-ex-anchor" href="#&#x5907;&#x6CE8;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5907;&#x6CE8;</h1>
+<h1 id="&#x5E38;&#x7528;&#x955C;&#x50CF;"><a name="&#x5E38;&#x7528;&#x955C;&#x50CF;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x955C;&#x50CF;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5E38;&#x7528;&#x955C;&#x50CF;</h1>
+<pre><code class="lang-bash"><span class="hljs-comment"># Postgres SQL</span>
+&gt; docker pull postgres
+&gt; docker run --name PostgresSQL <span class="hljs-_">-e</span> POSTGRES_PASSWORD=123456 -p 5432:5432 -itd postgres
+
+<span class="hljs-comment"># nginx</span>
+&gt; docker pull nginx
+
+<span class="hljs-comment"># Redis</span>
+&gt; docker pull redis
+
+<span class="hljs-comment"># busybox&#x3010;&#x96C6;&#x6210;&#x4E86;&#x4E09;&#x767E;&#x591A;&#x4E2A;&#x6700;&#x5E38;&#x7528;Linux&#x547D;&#x4EE4;&#x548C;&#x5DE5;&#x5177;&#x7684;&#x8F6F;&#x4EF6;&#x3011;</span>
+&gt; docker pull busybox
+
+<span class="hljs-comment"># RabbitMQ</span>
+&gt; docker pull rabbitmq
+
+<span class="hljs-comment"># Memcached</span>
+&gt; docker pull memcached
+
+<span class="hljs-comment"># Mysql</span>
+&gt; docker pull mysql
+
+<span class="hljs-comment"># Consul</span>
+&gt; docker pull consul
+
+<span class="hljs-comment"># Ubuntu</span>
+&gt; docker pull ubuntu
+
+<span class="hljs-comment"># Zookeeper</span>
+&gt; docker pull zookeeper
+
+<span class="hljs-comment"># MongoDB</span>
+&gt; docker pull mongo
+</code></pre>
+<hr>
+<h1 id="&#x5907;&#x6CE8;"><a name="&#x5907;&#x6CE8;" class="anchor-navigation-ex-anchor" href="#&#x5907;&#x6CE8;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5907;&#x6CE8;</h1>
 <ul>
-<li><p>host&#x7F51;&#x7EDC;&#x6A21;&#x5F0F;&#x4EC5;&#x652F;&#x6301;Linux&#x4E3B;&#x673A;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x652F;&#x6301;Docker for Mac&#xFF0C;Docker for Windows&#x6216;Docker EE for Windows Server&#x3002;</p>
-</li>
-<li></li>
+<li>host&#x7F51;&#x7EDC;&#x6A21;&#x5F0F;&#x4EC5;&#x652F;&#x6301;Linux&#x4E3B;&#x673A;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x652F;&#x6301;Docker for Mac&#xFF0C;Docker for Windows&#x6216;Docker EE for Windows Server&#x3002;</li>
 </ul>
 <hr>
-<h1 id="&#x76F8;&#x5173;&#x8D44;&#x6E90;"><a name="&#x76F8;&#x5173;&#x8D44;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x76F8;&#x5173;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x76F8;&#x5173;&#x8D44;&#x6E90;</h1>
+<h1 id="&#x76F8;&#x5173;&#x8D44;&#x6E90;"><a name="&#x76F8;&#x5173;&#x8D44;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x76F8;&#x5173;&#x8D44;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x76F8;&#x5173;&#x8D44;&#x6E90;</h1>
 <blockquote>
 <p>&#x5B98;&#x7F51;<br><a href="https://www.docker.com/" target="_blank">https://www.docker.com/</a>  </p>
+<p>Docker Hub<br><a href="https://hub.docker.com/" target="_blank">https://hub.docker.com/</a></p>
 <p>benjamin&#x6768; &#x535A;&#x5BA2;&#x56ED;<br><a href="https://www.cnblogs.com/benjamin77/category/1186577.html" target="_blank">https://www.cnblogs.com/benjamin77/category/1186577.html</a></p>
 <p>&#x83DC;&#x9E1F;&#x6559;&#x7A0B;<br><a href="https://www.runoob.com/docker/docker-command-manual.html" target="_blank">https://www.runoob.com/docker/docker-command-manual.html</a></p>
 </blockquote>
 <footer class="page-footer"><span class="copyright">&#xA9; &#x5C39;&#x81EA;&#x5F3A; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification"><a id="link_icp" href="http://www.beian.miit.gov.cn/" target="_blank">&#x7CA4;ICP&#x5907;18161097&#x53F7;</a>&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;
-2021-10-19 16:29:28
+2021-10-27 14:10:32
 </span></footer>
                                 
                                 </section>
@@ -582,7 +643,7 @@ ENTRYPOINT [&quot;dotnet&quot;, &quot;CySoft.WxAPI.dll&quot;]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Docker","level":"1.6","depth":1,"next":{"title":"Dockerfile","level":"1.6.1","depth":2,"anchor":"#Dockerfile","path":"chapter/Docker.md","ref":"chapter/Docker.md#Dockerfile","articles":[]},"previous":{"title":"中国天气","level":"1.5.2","depth":2,"anchor":"#中国天气","path":"chapter/SiteConsole.md","ref":"chapter/SiteConsole.md#中国天气","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-lunr","-search","search-pro","anchor-navigation-ex","splitter","github","sitemap","tbfed-pagefooter","alerts","donate","copy-code-button","advanced-emoji","baidu-tongji","expandable-chapters","-icp"],"styles":{"website":"styles/yzq.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 尹自强","modify_label":"<a id='link_icp' href='http://www.beian.miit.gov.cn/' target='blank'>粤ICP备18161097号</a>文件修订时间","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/554393109"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"5ee6cc423b317ce12202de00f0a9e1d7"},"splitter":{},"search-pro":{},"donate":{"alipay":"../../assets/donate_alipay.jpg","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"../../assets/donate_wechat.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"http://note.yinziqiang.com"},"icp":{"number":"粤ICP备18161097号","link":"http://www.beian.miit.gov.cn/"},"alerts":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"尹自强","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"尹自强.Note","language":"zh-hans","links":{"sidebar":{"作者GitHub":"https://github.com/554393109"}},"gitbook":"3.2.3","description":"尹自强.Note"},"file":{"path":"chapter/Docker.md","mtime":"2021-10-19T08:29:28.012Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-19T08:30:18.072Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Docker","level":"1.6","depth":1,"next":{"title":"Dockerfile","level":"1.6.1","depth":2,"anchor":"#Dockerfile","path":"chapter/Docker.md","ref":"chapter/Docker.md#Dockerfile","articles":[]},"previous":{"title":"中国天气","level":"1.5.2","depth":2,"anchor":"#中国天气","path":"chapter/SiteConsole.md","ref":"chapter/SiteConsole.md#中国天气","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-lunr","-search","search-pro","anchor-navigation-ex","splitter","github","sitemap","tbfed-pagefooter","alerts","donate","copy-code-button","advanced-emoji","baidu-tongji","expandable-chapters","-icp"],"styles":{"website":"styles/yzq.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&copy 尹自强","modify_label":"<a id='link_icp' href='http://www.beian.miit.gov.cn/' target='blank'>粤ICP备18161097号</a>文件修订时间","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/554393109"},"baidu-tongji":{"url":"https://hm.baidu.com/hm.js","token":"5ee6cc423b317ce12202de00f0a9e1d7"},"splitter":{},"search-pro":{},"donate":{"alipay":"../../assets/donate_alipay.jpg","alipayText":"支付宝打赏","button":"打赏","title":"","wechat":"../../assets/donate_wechat.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":1},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"sitemap":{"hostname":"http://note.yinziqiang.com"},"icp":{"number":"粤ICP备18161097号","link":"http://www.beian.miit.gov.cn/"},"alerts":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"尹自强","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"尹自强.Note","language":"zh-hans","links":{"sidebar":{"作者GitHub":"https://github.com/554393109"}},"gitbook":"3.2.3","description":"尹自强.Note"},"file":{"path":"chapter/Docker.md","mtime":"2021-10-27T06:10:32.086Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-10-27T06:15:26.681Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
