@@ -71,6 +71,7 @@ ENTRYPOINT ["dotnet", "CySoft.WxAPI.dll"]
 
 # RabbitMQ
 > docker pull rabbitmq
+> docker run -d --hostname yzq-rabbit --name RabbitMQ -p 15672:15672 rabbitmq:3-management
 
 # Memcached
 > docker pull memcached
@@ -89,6 +90,10 @@ ENTRYPOINT ["dotnet", "CySoft.WxAPI.dll"]
 
 # MongoDB
 > docker pull mongo
+
+# MSSQL【https://docs.microsoft.com/zh-cn/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-cmd】
+> docker pull mcr.microsoft.com/mssql/server:2019-latest
+> docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=123456" -p 1433:1433 --name MSSQL2019 -h DockerMsSQL -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 ---
