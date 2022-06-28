@@ -2,6 +2,10 @@
 
 * [在线笔记](README.md)
 
+* [Golang](chapter/Golang.md)
+  * [安装与配置](chapter/Golang.md#安装与配置)
+  * [常用命令](chapter/Golang.md#常用命令)
+
 * [Git](chapter/Git.md)
   * [版本管理流程](chapter/Git.md#版本管理流程)
   * [常用命令](chapter/Git.md#常用命令)
