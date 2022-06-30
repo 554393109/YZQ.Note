@@ -175,8 +175,8 @@ func Method() {
 package main
 
 import (
-  "HelloGo/TestImport/Lib1" // 导入Lib1
-  "HelloGo/TestImport/Lib2" // 导入Lib2
+  "HelloGo/TestImport/Lib1" // 导入Lib1（源码根目录为%GOPATH%，HelloGo为项目文件夹）
+  "HelloGo/TestImport/Lib2" // 导入Lib2（源码根目录为%GOPATH%，HelloGo为项目文件夹）
 )
 
 func main() {
