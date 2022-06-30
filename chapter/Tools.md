@@ -16,7 +16,7 @@
 
 ## Redis Desktop Manager
 
-> Reids 可视化管理端
+> Reids 可视化管理端  
 > <https://redisdesktop.com/>
 
 ---
@@ -88,14 +88,14 @@
 
 # RabbitMQ
 
-> 消息队列
+> 消息队列  
 > <http://www.rabbitmq.com/>
 
 ---
 
 # Everything
 
-> 文件搜索
+> 文件搜索  
 > <http://www.voidtools.com/>
 
 ---
@@ -122,7 +122,7 @@
 
 # CodeSmith
 
-> 代码生成
+> 代码生成  
 > <http://www.codesmithtools.com/>
 
 ---
@@ -137,14 +137,14 @@
 
 ## calibre
 
-> GitBook 导出PDF、EPUB、MOBI
+> GitBook 导出PDF、EPUB、MOBI  
 > <https://calibre-ebook.com/>
 
 ---
 
 # MarkdownPad
 
-> Markdown编辑器
+> Markdown编辑器  
 > <http://markdownpad.com/>
 
 ---
@@ -157,7 +157,7 @@
 
 # Rapid Environment Editor
 
-> 系统环境变量编辑器
+> 系统环境变量编辑器  
 > <https://www.rapidee.com/en/about>
 
 ---
@@ -192,7 +192,7 @@ c9ffbc159bf2640ad5d9b88f8fa9d9cbf2b7e5b022a21938465244
 
 # Beyond Compare
 
-> 文本比对
+> 文本比对  
 > <http://www.scootersoftware.com/>
 
 ```text
@@ -206,6 +206,11 @@ rWu5qSJGEnbsXNfJdq5L2D8QgRdV-sXHp2A-7j1X2n4WIISvU1V9koIyS
 NisHFBTcWJS0sC5BTFwrtfLEE9lEwz2bxHQpWJiu12ZeKpi+7oUSqebX+
 ```
 
+```bat
+::删除注册表中试用记录
+reg delete "HKEY_CURRENT_USER\Software\Scooter Software\Beyond Compare 4" /f
+```
+
 # FlashFXP
 
 > FTP客户端
@@ -214,7 +219,7 @@ NisHFBTcWJS0sC5BTFwrtfLEE9lEwz2bxHQpWJiu12ZeKpi+7oUSqebX+
 
 ## Nuget
 
-> .NET的Microsoft开发平台的包管理器
+> .NET的Microsoft开发平台的包管理器  
 > <https://www.nuget.org/>
 
 ## NPM
