@@ -12,7 +12,7 @@
         "anchor-navigation-ex",
         "splitter",    
         "github",
-        "sitemap",
+        "-sitemap",
         "tbfed-pagefooter",
         "alerts",
         "donate",

@@ -75,8 +75,11 @@
 
 # Golang
 
-> <https://goproxy.io/>
-> <https://learnku.com/go/wikis>
+> <https://goproxy.io/>  
+> Go社区Wiki  
+> <https://learnku.com/go/wikis>  
+> 中文在线文档  
+> <http://doc.golang.ltd/>
 
 ---
 
