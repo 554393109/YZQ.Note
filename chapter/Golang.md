@@ -22,8 +22,8 @@
 > **Windows**  
 > 1.右键 我的电脑 -> 属性 -> 高级系统设置 -> 环境变量  
 > 2.在“用户变量”或“系统变量”中点击”新建“按钮  
-> 3.“变量名”分别为“GOPROXY”和“GO111MODULE”  
-> 4.“变量值”分别为“on”和“<https://goproxy.cn,direct>”  
+> 3.“变量名”分别为“GOROOT”、“GOPATH”、“GOPROXY”、“GO111MODULE”、“GOSUMDB”  
+> 4.“变量值”分别为“Golang根目录”、“Golang工作目录”、“on”、“<https://goproxy.cn,direct>”、“sum.golang.google.cn”  
 > 5.最后点击“确定”按钮保存设置
 >
 > **Mac/Linux**  
