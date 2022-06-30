@@ -144,7 +144,45 @@ func Method_3() (ret3 string, ret4 string) {
 ## import和init方法
 
 ```go
+package Lib1
 
+import "fmt"
+
+func init() {
+  fmt.Println("执行 Lib1.init()") // init方法在调用方import时执行，参考DotNet构造函数
+}
+
+func Method() {
+  fmt.Println("执行 Lib1.Method()")
+}
+```
+
+```go
+package Lib2
+
+import "fmt"
+
+func init() {
+  fmt.Println("执行 Lib2.init()") // init方法在调用方import时执行，参考DotNet构造函数
+}
+
+func Method() {
+  fmt.Println("执行 Lib2.Method()")
+}
+```
+
+```go
+package main
+
+import (
+  "HelloGo/TestImport/Lib1" // 导入Lib1
+  "HelloGo/TestImport/Lib2" // 导入Lib2
+)
+
+func main() {
+  Lib1.Method() // 调用Lib1.Method()
+  Lib2.Method() // 调用Lib2.Method()
+}
 ```
 
 ---
