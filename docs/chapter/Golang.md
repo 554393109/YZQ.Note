@@ -1,61 +1,80 @@
-<b style="font-size: 2em">Git</b>
+<b style="font-size: 2em">Golang</b>
+
+既然选择使用Golang开发，科学上网是前提
 
 ---
 
 # 安装与配置
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+## 下载并安装Golang程序
+
+> **Go官网**  
+> <https://go.dev/>
+>
+> **Go国内镜像**  
+> <https://goproxy.io/>
+>
+> **七牛**  
+> <https://goproxy.cn/>
+
+## 配置环境变量
+
+> **Windows**  
+> 1.右键 我的电脑 -> 属性 -> 高级系统设置 -> 环境变量  
+> 2.在“用户变量”或“系统变量”中点击”新建“按钮  
+> 3.“变量名”分别为“GOPROXY”和“GO111MODULE”  
+> 4.“变量值”分别为“on”和“<https://goproxy.cn,direct>”  
+> 5.最后点击“确定”按钮保存设置
+>
+> **Mac/Linux**  
+> // 设置你的 bash 环境变量  
+> echo "export GO111MODULE=on" >> ~/.profile && source ~/.profile  
+> echo "export GOPROXY=<https://goproxy.cn,direct>" >> ~/.profile && source ~/.profile  
+> // 如果终端是 zsh，使用以下命令  
+> echo "export GO111MODULE=on" >> ~/.zshrc && source ~/.zshrc  
+> echo "export GOPROXY=<https://goproxy.cn,direct>" >> ~/.zshrc && source ~/.zshrc
+
+## 配置Visual Studio Code
+
+> **安装扩展插件**  
+> 1.Go或Go Nightly（Go Team at Google）  
+> 2.Code Runner（Jun Han）
+>
+> **安装辅助工具（语法提醒等开发必要功能）**  
+> 1.“Ctrl+Shift+P”打开“命令面板”，输入“go:Install/Update Tools”，全选并“确定”安装
+
+---
+
+# 语法
+
+## 变量声明
+
+```go
+// 方式1
+var a int       // 不初始化值，默认为：0
+var a int = 123   // 初始化值
+
+// 方式2（无需声明类型，根据初始化值自动推断）
+var a = 123
+
+// 方式3（无需var和声明类型，根据初始化值自动推断，仅支持func内使用）
+a := 123
+```
 
 ---
 
 # 常用命令
 
 ```text
-// 在当前目录初始化为Git代码库
-> git init
+// 查看Golang版本
+> go version
 
-// 在当前目录下新建一个目录，并将其初始化为Git代码库
-> git init {目录名称}
-
-// 下载一个项目和它的整个代码历史
-> git clone {url}
+// 查看环境配置
+> go env
 
 ---
 
-// 显示当前的Git配置
-> git config --list
-
-// 编辑当前的Git配置
-> git config -e [--global]
-
-// 设置提交代码是的用户信息
-> git config [--global] user.name "{name}"
-> git config [--global] user.email "{email}"
-
----
-
-// 查看状态
-> git status
-
-// 查看变更内容
-> git diff
-
-// 添加指定文件到暂存区
-> git add {file1} {file2} ...
-
-// 添加指定目录（递归）到暂存区
-> git add {dir}
-
-// 添加当前目录的所有文件到暂存区
-> git add .
+// xxx
+> xxxx
 
 ```
-
-**名词**
-
-* master：默认开发分支
-* origin：默认远程版本库
-* Index / Stage：暂存区
-* Workspace：工作区
-* Repository：仓库区（或本地仓库）
-* Remote：远程仓库
