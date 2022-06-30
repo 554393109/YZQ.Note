@@ -72,9 +72,11 @@ a := 123
 // 查看环境配置
 > go env
 
+// GO111MODULE=on 以后，下载的模块内容会缓存在 $GOPATH/pkg/mod 目录中。使用以下命令可清空缓存：
+> go clean --modcache
+
 ---
 
 // xxx
-> xxxx
-
+> xxx
 ```
