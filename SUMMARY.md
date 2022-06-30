@@ -4,6 +4,7 @@
 
 * [Golang](chapter/Golang.md)
   * [安装与配置](chapter/Golang.md#安装与配置)
+  * [语法](chapter/Golang.md#语法)
   * [常用命令](chapter/Golang.md#常用命令)
 
 * [Git](chapter/Git.md)

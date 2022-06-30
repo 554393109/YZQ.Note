@@ -4,9 +4,6 @@
 
 ## 欢迎合作
 
-> Mobile：3b4f4e022【程序猿必懂】
-
-> QQ：554393109
-
+> Mobile：3b4f4e022【程序猿必懂】  
+> QQ：554393109  
 > Wechat：Sharp_Yin
-
