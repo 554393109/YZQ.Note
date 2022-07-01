@@ -196,6 +196,74 @@ func main() {
 }
 ```
 
+## 指针
+
+```go
+func main() {
+  a := 1
+  sub_1(a)
+  fmt.Println("main.a =", a) // main.a == 1
+
+  b := 1
+  fmt.Println("main.&b =", &b) // main.&b == 0xc000016098（&b为参数b的地址）
+  sub_2(&b)                    // 传递参数b的地址
+  fmt.Println("main.b =", b)   // main.b == 3
+}
+
+// 参数传值，在子函数内改变，不影响主函数中的值
+func sub_1(a int) {
+  a = 2
+  fmt.Println("sub_1.a =", a) // sub_1.a == 2
+}
+
+// 参数传址，在子函数内改变，影响主函数中的值
+func sub_2(b *int) { // 此处b为参数b的地址
+  *b = 3
+  fmt.Println("sub_2.*b =", *b) // sub_2.*b == 3（*b获取参数b的值）
+  fmt.Println("sub_2.b =", b)   // sub_2.b == 0xc000016098
+}
+
+// 输出：
+// sub_1.a = 2
+// main.a = 1
+// main.&b = 0xc000016098
+// sub_2.*b = 3
+// sub_2.b = 0xc000016098
+// main.b = 3
+```
+
+传址方式，交换变量值，示例：
+
+```go
+func main() {
+  a := 1
+  b := 2
+
+  fmt.Println("main.a =", a, "main.b =", b)
+  fmt.Println("main.&a =", &a, "main.&b =", &b)
+  swap(&a, &b)
+  fmt.Println("main.a =", a, "main.b =", b)
+  fmt.Println("main.&a =", &a, "main.&b =", &b)
+}
+
+// 交换换值
+func swap(a *int, b *int) {
+  fmt.Println("swap.*a =", *a, "swap.*b =", *b)
+
+  tmp := *a
+  *a = *b
+  *b = tmp
+}
+
+// 输出：
+// main.a = 1 main.b = 2
+// main.&a = 0xc000016098 main.&b = 0xc0000160b0
+// swap.*a = 1 swap.*b = 2
+// main.a = 2 main.b = 1
+// main.&a = 0xc000016098 main.&b = 0xc0000160b0
+
+```
+
 ---
 
 # 常用命令
