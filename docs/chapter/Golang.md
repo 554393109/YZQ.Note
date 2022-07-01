@@ -17,7 +17,7 @@
 > **七牛**  
 > <https://goproxy.cn/>
 
-## 配置环境变量
+## 配置环境变量（国内镜像加速）
 
 > **Windows**  
 > 1.右键 我的电脑 -> 属性 -> 高级系统设置 -> 环境变量  
@@ -28,11 +28,18 @@
 >
 > **Mac/Linux**  
 > // 设置你的 bash 环境变量  
+> echo "export GOROOT=Golang根目录" >> ~/.profile && source ~/.profile  
+> echo "export GOPATH=Golang工作目录" >> ~/.profile && source ~/.profile  
 > echo "export GO111MODULE=on" >> ~/.profile && source ~/.profile  
 > echo "export GOPROXY=<https://goproxy.cn,direct>" >> ~/.profile && source ~/.profile  
+> echo "export GOSUMDB=sum.golang.google.cn" >> ~/.profile && source ~/.profile  
+>
 > // 如果终端是 zsh，使用以下命令  
+> echo "export GOROOT=Golang根目录"" >> ~/.zshrc && source ~/.zshrc  
+> echo "export GOPATH=Golang工作目录" >> ~/.zshrc && source ~/.zshrc  
 > echo "export GO111MODULE=on" >> ~/.zshrc && source ~/.zshrc  
 > echo "export GOPROXY=<https://goproxy.cn,direct>" >> ~/.zshrc && source ~/.zshrc
+> echo "export GOSUMDB=sum.golang.google.cn" >> ~/.zshrc && source ~/.zshrc  
 
 ## 配置Visual Studio Code
 
@@ -177,6 +184,10 @@ package main
 import (
   "HelloGo/TestImport/Lib1" // 导入Lib1（源码根目录为%GOPATH%，HelloGo为项目文件夹）
   "HelloGo/TestImport/Lib2" // 导入Lib2（源码根目录为%GOPATH%，HelloGo为项目文件夹）
+
+  _ "HelloGo/TestImport/Lib1" // 导入Lib1，仅在import时执行init函数，无法调用包内函数
+  . "HelloGo/TestImport/Lib1" // 导入Lib1，合并当前包，后续调用省略包名
+  MyLib "HelloGo/TestImport/Lib1" // 导入Lib1，并声名为MyLib，后续通过MyLib.Method()进行调用
 )
 
 func main() {
