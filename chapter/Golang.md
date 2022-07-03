@@ -82,7 +82,7 @@ var {
 }
 ```
 
-## const常量和iota
+## const常量和iota实现枚举数值
 
 > iota 必须跟随const使用
 
@@ -115,7 +115,7 @@ const (
 )
 ```
 
-## 函数
+## 函数和传参、返回
 
 ```go
 func main() {
@@ -148,7 +148,7 @@ func Method_3() (ret3 string, ret4 string) {
 }
 ```
 
-## import和init方法
+## import包和init方法
 
 ```go
 package Lib1
@@ -261,6 +261,58 @@ func swap(a *int, b *int) {
 // swap.*a = 1 swap.*b = 2
 // main.a = 2 main.b = 1
 // main.&a = 0xc000016098 main.&b = 0xc0000160b0
+
+```
+
+## defer 延后执行
+
+```go
+func main() {
+  // defer在调用函数执行完（return后），栈式处理当前函数内定义的每个defer对象（后进先出）
+  fmt.Println("main begin")
+  defer fun_1()     // 延后函数fun_1进栈
+  defer fun_2()     // 延后函数fun_2进栈
+  result := fun_3() // 同步执行函数fun_3
+  fmt.Println("fun_3 =", result)
+  fmt.Println("main end")
+}
+
+func fun_1() {
+  fmt.Println("fun_1 run")
+}
+
+func fun_2() {
+  fmt.Println("fun_2 run")
+}
+
+func fun_3() bool {
+  fmt.Println("fun_3 run")
+  defer fun_3_1()  // 延后函数fun_3_1进栈
+  return fun_3_2() // 同步执行函数fun_3_2，并返回结果
+}
+
+func fun_3_1() {
+  fmt.Println("fun_3_1 run")
+}
+
+func fun_3_2() bool {
+  fmt.Println("fun_3_2 run")
+  return true
+}
+
+// main begin
+// fun_3 run
+// fun_3_2 run
+// fun_3_1 run
+// fun_3 = true
+// main end
+// fun_2 run
+// fun_1 run
+```
+
+## slice
+
+```go
 
 ```
 
