@@ -54,6 +54,30 @@
 
 # 语法
 
+## 数据类型
+
+布尔型：bool
+
+有符号整型：  
+ int  
+ int8（-128~127）  
+ int16（-32768~32767）  
+ int32（-2147483648~2147483647）  
+ int64（-9223372036854775808~9223372036854775807）
+
+无符号整型：  
+ uint  
+ uint8（0~255）  
+ uint16（0~65535）  
+ uint32（0~4294967295）  
+ uint64（0~18446744073709551615）  
+
+浮点型：float32、float64、complex64、complex128
+
+字符串型：string
+
+其他：byte、rune、uintptr（无符号整型，用于存放一个指针）
+
 ## 变量声明
 
 ```go
@@ -141,7 +165,7 @@ func Method_2(name string, age int) (string, string) {
 
 // 无形参，多个命名返回值
 func Method_3() (ret3 string, ret4 string) {
-  //func Method_3() (ret3, ret4 string) {	// 同类型参数合并声明
+  //func Method_3() (ret3, ret4 string) { // 同类型参数合并声明
   ret3 = "ddd"
   ret4 = "eee"
   return
@@ -308,6 +332,117 @@ func fun_3_2() bool {
 // main end
 // fun_2 run
 // fun_1 run
+```
+
+## 定长数组
+
+```go
+func main() {
+  const arrLen = 3      // 数组长度只能是const不能是val
+  var arr_1 [arrLen]int // 定长数组
+  // var arr_2 = [arrLen]int{10, 20, 30}  // 定长数组（初始化部分值）
+  //arr_2 := [arrLen + 1]int{10, 20, 30} // 定长数组（初始化部分值）
+  arr_2 := [...]int{10, 20, 30, 0} // 定长数组（初始化数组长度全部值，可用...代替长度值，初始化长度为数组实际长度）
+
+  fmt.Printf("arr_1 Type:%T\n", arr_1) // 类型为长度是3的int数组
+  fmt.Printf("arr_2 Type:%T\n", arr_2) // 类型为长度是4的int数组（长度不同视为不同类型，函数传参区分长度）
+  fmt.Println("-------------")
+
+  for i := 0; i < arrLen; i++ {
+    fmt.Printf("arr_1[%v] = %v\n", i, arr_1[i])
+  }
+  fmt.Println("-------------")
+
+  for i := 0; i < len(arr_2); i++ { // 循环方式一
+    fmt.Printf("arr_2[%v] = %v\n", i, arr_2[i])
+  }
+  fmt.Println("-------------")
+
+  for index, item := range arr_2 { // 循环方式二range（index：下标，item：项）
+    fmt.Printf("arr_2[%v] = %v\n", index, item)
+  }
+  fmt.Println("-------------")
+
+  // Foreach(arr_1) // 此传值会报错，[3]int和[4]int为不同类型
+  Foreach(arr_2)
+}
+
+// 定长数组为传值（形参需指定数组长度），在子函数内改变，不影响主函数中的值
+func Foreach(arr [4]int) {
+  for _, item := range arr { // forr
+    fmt.Println(item)
+  }
+}
+
+// arr_1 Type:[3]int
+// arr_2 Type:[4]int
+// -------------
+// arr_1[0] = 0
+// arr_1[1] = 0
+// arr_1[2] = 0
+// -------------
+// arr_2[0] = 10
+// arr_2[1] = 20
+// arr_2[2] = 30
+// arr_2[3] = 0
+// -------------
+// arr_2[0] = 10
+// arr_2[1] = 20
+// arr_2[2] = 30
+// arr_2[3] = 0
+// -------------
+// 10
+// 20
+// 30
+// 0
+```
+
+## slice（切片、动态数组）
+
+```go
+func main() {
+  // make(切片类型, 切片初始化长度, 切片容量)
+  arr_1 := make([]int, 3, 6)    // 定义方式一：创建一个整型切片，其初始化长度为3，容量为6
+  arr_2 := make([]int, 4)       // 定义方式二：创建一个整型切片，其初始化长度为4。若不传入容量的大小，则容量和初始化长度相同
+  arr_3 := []int{1, 2, 3, 4, 5} // 定义方式三：创建一个整型切片，长度和容量为初始化值的数量5
+
+  fmt.Printf("arr_1 Len:%v, Type:%T\n", len(arr_1), arr_1)
+  fmt.Printf("arr_2 Len:%v, Type:%T\n", len(arr_2), arr_2)
+  fmt.Printf("arr_3 Len:%v, Type:%T\n", len(arr_3), arr_3)
+
+  Foreach(arr_1)
+  fmt.Println("-------------")
+
+  Foreach(arr_2)
+  fmt.Println("-------------")
+
+  Foreach(arr_3)
+}
+
+// 切片slice为传址（形参无需指定数组长度），在子函数内改变，影响主函数中的值
+func Foreach(arr []int) {
+  for _, item := range arr { // forr
+    fmt.Println(item)
+  }
+}
+
+// arr_1 Len:3, Type:[]int
+// arr_2 Len:4, Type:[]int
+// arr_3 Len:5, Type:[]int
+// 0
+// 0
+// 0
+// -------------
+// 0
+// 0
+// 0
+// 0
+// -------------
+// 1
+// 2
+// 3
+// 4
+// 5
 ```
 
 ---
