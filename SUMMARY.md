@@ -27,8 +27,6 @@
   * [常用命令](chapter/Npm.md#常用命令)
 
 * [网站Console](chapter/SiteConsole.md)
-  * [微信开发文档](chapter/SiteConsole.md#微信开发文档)
-  * [中国天气](chapter/SiteConsole.md#中国天气)
 
 * [Docker](chapter/Docker.md)
   * [Dockerfile](chapter/Docker.md#Dockerfile)
