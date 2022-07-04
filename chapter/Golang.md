@@ -78,6 +78,60 @@
 
 其他：byte、rune、uintptr（无符号整型，用于存放一个指针）
 
+## 关键字
+
+<table class="table table-bordered table-striped table-condensed">
+  <tr>
+    <td>break</td>
+    <td>default</td>
+    <td>func</td>
+    <td>interface</td>
+    <td>select</td>
+  </tr>
+  <tr>
+    <td>case</td>
+    <td>defer</td>
+    <td>go</td>
+    <td>map</td>
+    <td>struct</td>
+  </tr>
+  <tr>
+    <td>chan</td>
+    <td>else</td>
+    <td>goto</td>
+    <td>package</td>
+    <td>switch</td>
+  </tr>
+  <tr>
+    <td>const</td>
+    <td>fallthrough</td>
+    <td>if</td>
+    <td>range</td>
+    <td>type</td>
+  </tr>
+  <tr>
+    <td>continue</td>
+    <td>for</td>
+    <td>import</td>
+    <td>return</td>
+    <td>var</td>
+  </tr>
+</table>
+
+通过 const 关键字来进行常量的定义。  
+通过在函数体外部使用 var 关键字来进行全局变量的声明和赋值。  
+通过 type 关键字来进行结构(struct)和接口(interface)的声明。  
+通过 func 关键字来进行函数的声明。  
+
+可见性规则
+Go语言中，使用大小写来决定该常量、变量、类型、接口、结构或函数是否可以被外部包所调用。
+函数名首字母小写即为private，函数名首字母大写即为public。
+
+```go
+func getId()  { } // 私有
+func Printf() { } // 公共
+```
+
 ## 变量声明
 
 ```go
@@ -204,6 +258,9 @@ func Method() {
 
 ```go
 package main
+
+// 导入Lib1，并声名为MyLib，后续通过MyLib.Method()进行调用
+// import "HelloGo/TestImport/Lib1" MyLib
 
 import (
   "HelloGo/TestImport/Lib1" // 导入Lib1（源码根目录为%GOPATH%，HelloGo为项目文件夹）
