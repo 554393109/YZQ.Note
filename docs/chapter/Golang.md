@@ -502,6 +502,104 @@ func Foreach(arr []int) {
 // 5
 ```
 
+## map
+
+```go
+// 声明变量，默认 map 是 nil
+// var map_variable map[key_type]value_type
+
+// 使用 make 函数
+// map_variable := make(map[key_type]value_type)
+
+// 使用 delete 函数
+// delete(map, key)
+
+func main() {
+  map_1 := Mode_1()
+  fmt.Println(map_1)
+  fmt.Println("----------------------------------")
+  map_2 := Mode_2()
+  fmt.Println(map_2)
+  fmt.Println("----------------------------------")
+  map_3 := Mode_3()
+  fmt.Println(map_3)
+  fmt.Println("----------------------------------")
+  for k, v := range map_3 { // 遍历map
+    fmt.Println("Key =", k, "Value =", v)
+  }
+  fmt.Println("----------------------------------")
+
+  exists_two := map_1["two"]   // 从map_1获取two的值
+  exists_five := map_1["five"] // 从map_1获取five的值
+  fmt.Println("map_1 exists 'two'：", exists_two)
+  fmt.Println("map_1 exists 'five'：", exists_five)
+
+  delete(map_1, "two") // 删除two的值
+  exists_two = map_1["two"]
+  fmt.Println("map_1 exists 'two'：", exists_two)
+}
+
+// 创建方式一
+func Mode_1() map[string]string {
+  var map_1 map[string]string // 声明
+  if map_1 == nil {           // 判断为nil
+    fmt.Println("Type_1.map_1 is nil")
+    map_1 = make(map[string]string, 3) // 创建初始长度为5的map
+    map_1["one"] = "Golang"            // 赋值
+    map_1["two"] = "C#"                // 赋值
+    map_1["three"] = "javascript"      // 赋值
+    map_1["ten"] = "java"              // 赋值（超出容量会动态增加长度）
+  }
+
+  fmt.Printf("map_1 长度：%v\n", len(map_1))
+  return map_1
+}
+
+// 创建方式二
+func Mode_2() map[int]string {
+  map_2 := make(map[int]string) // 通过make声明并创建初始长度为0的map
+  map_2[1] = "Golang"
+  map_2[2] = "C#"
+  map_2[3] = "javascript"
+  map_2[10] = "java"
+
+  fmt.Printf("map_2 长度：%v\n", len(map_2))
+  return map_2
+}
+
+// 声明和创建方式二
+func Mode_3() map[int]string {
+  map_3 := map[int]string{
+    1:  "Golang",
+    2:  "C#",
+    3:  "javascript",
+    10: "java",
+  }
+
+  fmt.Printf("map_3 长度：%v\n", len(map_3))
+  return map_3
+}
+
+// Type_1.map_1 is nil
+// map_1 长度：4
+// map[one:Golang ten:java three:javascript two:C#]
+// ----------------------------------
+// map_2 长度：4
+// map[1:Golang 2:C# 3:javascript 10:java]
+// ----------------------------------
+// map_3 长度：4
+// map[1:Golang 2:C# 3:javascript 10:java]
+// ----------------------------------
+// Key = 1 Value = Golang
+// Key = 2 Value = C#
+// Key = 3 Value = javascript
+// Key = 10 Value = java
+// ----------------------------------
+// map_1 exists 'two'： C#
+// map_1 exists 'five'： 
+// map_1 exists 'two'： 
+```
+
 ---
 
 # 常用命令
