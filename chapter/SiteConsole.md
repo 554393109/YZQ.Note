@@ -19,6 +19,13 @@ $('.pendant, .doc-box-right, .doc-side, .header-wrp, .header_segment, .bread-cru
 $('.conMidtab').find('.conMidtab2:eq(2),.conMidtab2:eq(0)').remove();$('.lqcontentBoxheader,.weather_li,.weather_li_head,.locationSearch,.footer').remove();
 ```
 
+# Gitbook
+
+```javascript
+// 加大文档宽度
+$('.page-inner').css({'max-width':'initial','padding':'20px 20px 40px'})
+```
+
 # 富友支付接口文档
 
 ```javascript

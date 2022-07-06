@@ -34,6 +34,8 @@
   * [常用镜像](chapter/Docker.md#常用镜像)
   * [相关资源](chapter/Docker.md#相关资源)
 
+* [技巧](chapter/Skill.md)
+
 * [常用工具](chapter/Tools.md)
 
 * [个人履历](chapter/bio.md)
