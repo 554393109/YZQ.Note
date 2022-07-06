@@ -502,7 +502,7 @@ func Foreach(arr []int) {
 // 5
 ```
 
-## map
+## map 集合
 
 ```go
 // 声明变量，默认 map 是 nil
@@ -598,6 +598,57 @@ func Mode_3() map[int]string {
 // map_1 exists 'two'： C#
 // map_1 exists 'five'： 
 // map_1 exists 'two'： 
+```
+
+## struct 结构体
+
+```go
+// struct结构体作参数时是传值
+// 定义结构体（定义的结构体如果只在当前包内使用，结构体的属性不用区分大小写。如果想要被其他的包引用，那么结构体的属性的首字母需要大写。结构体小写开头的属性只能包内调用）
+type People struct {
+  Name     string  // 大写开头为public（当要将结构体对象转换为 JSON 时，对象中的属性首字母必须是大写，才能正常转换为 JSON）
+  age      int     // 小写开头为private（JSON序列化时忽略private字段）
+  Weight   float32 `json:"-"`    // [`json:"-"`]标记输出json时忽略该字段
+  Birthday string  `json:"bday"` // [`json:"bday"`]标记输出的json名字为bday
+}
+
+func main() {
+  yzq := People{
+    Name:     "尹自强",
+    age:      18,
+    Weight:   130.5,
+    Birthday: "2022-01-01",
+  }
+
+  zhangsan := People{"张三", 19, 150.8, "1999-12-31"} // 按结构体定义顺序赋值
+
+  fmt.Println(yzq)
+  fmt.Println(zhangsan)
+  rename(yzq)
+  fmt.Println(yzq)
+  rename_2(&yzq)
+  fmt.Println(yzq)
+
+  if result, err := json.Marshal(yzq); err == nil {
+    fmt.Println("JSON =", string(result))
+  }
+}
+
+// 传值
+func rename(people People) {
+  people.Name = "今晚出嚟威"
+}
+
+// 传址
+func rename_2(people *People) {
+  people.Name = "今晚出嚟威"
+}
+
+// {尹自强 18 130.5 2022-01-01}
+// {张三 19 150.8 1999-12-31}
+// {尹自强 18 130.5 2022-01-01}
+// {今晚出嚟威 18 130.5 2022-01-01}
+// JSON = {"Name":"今晚出嚟威","bday":"2022-01-01"}
 ```
 
 ---
