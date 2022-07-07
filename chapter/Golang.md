@@ -193,7 +193,9 @@ const (
 )
 ```
 
-## 函数和传参、返回
+## 函数
+
+### 传参、返回
 
 ```go
 func main() {
@@ -224,6 +226,97 @@ func Method_3() (ret3 string, ret4 string) {
   ret4 = "eee"
   return
 }
+
+// 18 岁的 yzq 你好
+// 18 岁的 yzq 你好
+// ret0 = aaa
+// ret1 = bbb ret2 = ccc
+// ret3 = ddd ret4 = eee
+```
+
+### 作为参数传递
+
+```go
+// 声明一个函数类型
+type cb func(int) int
+
+func main() {
+  testCallBack(1, callBack)
+  testCallBack(2, func(x int) int {
+    fmt.Printf("我是回调，x：%d\n", x)
+    return x
+  })
+}
+
+func testCallBack(x int, f cb) {
+  f(x)
+}
+
+func callBack(x int) int {
+  fmt.Printf("我是回调，x：%d\n", x)
+  return x
+}
+
+// 我是回调，x：1
+// 我是回调，x：2
+```
+
+### 闭包
+
+```go
+// 定义函数getSequence()返回值是匿名函数func()，该匿名函数的返回值是int
+func getSequence() func() int {
+  i := 0
+  return func() int {
+    i += 1
+    return i
+  }
+}
+
+func main() {
+  /* nextNumber 为一个函数，函数 i 为 0 */
+  nextNumber := getSequence()
+
+  /* 调用 nextNumber 函数，i 变量自增 1 并返回 */
+  fmt.Println(nextNumber())
+  fmt.Println(nextNumber())
+  fmt.Println(nextNumber())
+
+  /* 创建新的函数 nextNumber1，并查看结果 */
+  nextNumber1 := getSequence()
+  fmt.Println(nextNumber1())
+  fmt.Println(nextNumber1())
+}
+s
+// 1
+// 2
+// 3
+// 1
+// 2
+```
+
+> 闭包示例
+
+```go
+// 闭包使用方法，函数声明中的返回值(闭包函数)不用写具体的形参名称
+func add(x1, x2 int) func(int, int) (int, int, int) {
+  i := 0
+  return func(x3, x4 int) (int, int, int) {
+    i += 1
+    return i, x1 + x2, x3 + x4
+  }
+}
+
+func main() {
+  add_func := add(1, 2)
+  fmt.Println(add_func(4, 5))
+  fmt.Println(add_func(1, 3))
+  fmt.Println(add_func(2, 2))
+}
+
+//1 3 9
+//2 3 4
+//3 3 4
 ```
 
 ## import包和init方法
@@ -649,6 +742,72 @@ func rename_2(people *People) {
 // {尹自强 18 130.5 2022-01-01}
 // {今晚出嚟威 18 130.5 2022-01-01}
 // JSON = {"Name":"今晚出嚟威","bday":"2022-01-01"}
+```
+
+## OOP 面向对象
+
+### 类封装
+
+```go
+// 为结构体绑定方法
+// func (variable_name variable_type) func_name() [return_type]{
+//    /* 函数体*/
+// }
+
+// people类首字母小写，为private私有类
+type people struct {
+  Name     string
+  age      uint8
+  Weight   float32 `json:"-"`    // [`json:"-"`]标记输出json时忽略该字段
+  Birthday string  `json:"bday"` // [`json:"bday"`]标记输出的json名字为bday
+}
+
+// 首字母大写，定义类的public公有方法
+func (_people people) Show() {
+  fmt.Printf("姓名：%v，年龄：%v，体重：%v\n", _people.Name, _people.age, _people.Weight)
+}
+
+// struct类型作参数时是传值，所以在方法内修改值，在外部主函数中不生效
+func (_people people) rename_1(new_name string) {
+  _people.Name = new_name // 此处编译器会有提示修改值无效
+}
+
+// 通过指针传址，在方法内修改值，在外部主函数中有效
+func (_people *people) rename_2(new_name string) {
+  _people.Name = new_name
+}
+
+func (_people *people) getname() string {
+  return _people.Name
+}
+
+func main() {
+  yzq := people{
+    Name:     "尹自强",
+    age:      18,
+    Weight:   130.5,
+    Birthday: "2022-01-01",
+  }
+
+  yzq.Show()
+  yzq.rename_1("今晚出嚟威1")
+  yzq.Show()
+  yzq.rename_2("今晚出嚟威2")
+  yzq.Show()
+
+  name := yzq.getname()
+  fmt.Println(name)
+
+  if result, err := json.Marshal(yzq); err == nil {
+    fmt.Println("JSON =", string(result))
+  }
+}
+
+// 姓名：尹自强，年龄：18，体重：130.5
+// 姓名：尹自强，年龄：18，体重：130.5
+// 姓名：今晚出嚟威2，年龄：18，体重：130.5
+// 今晚出嚟威2
+// JSON = {"Name":"今晚出嚟威2","bday":"2022-01-01"}
 ```
 
 ---
