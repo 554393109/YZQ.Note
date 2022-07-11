@@ -746,7 +746,7 @@ func rename_2(people *People) {
 
 ## OOP 面向对象
 
-### 类封装
+### 封装
 
 ```go
 // 为结构体绑定方法
@@ -808,6 +808,69 @@ func main() {
 // 姓名：今晚出嚟威2，年龄：18，体重：130.5
 // 今晚出嚟威2
 // JSON = {"Name":"今晚出嚟威2","bday":"2022-01-01"}
+```
+
+### 继承
+
+```go
+// Golang中继承类似于组合形式
+
+// 定义父类Human
+type Human struct {
+  Name string
+  Sex  uint8
+}
+
+// 父类方法Eat
+func (_human *Human) Eat() {
+  fmt.Println("Human Eat")
+}
+
+// 父类方法Talk
+func (_human *Human) Talk() {
+  fmt.Println("Human Talk")
+}
+
+// 定义子类
+type Superman struct {
+  Human // ★继承Human类
+  Level uint
+}
+
+// 重写父类Eat方法
+func (_superman *Superman) Eat() {
+  fmt.Println("Superman Eat")
+}
+
+// 子类自有方法Fly
+func (_superman *Superman) Fly() {
+  fmt.Println("Superman Fly")
+}
+
+func main() {
+  // 初始化方式一：需要通过先赋值父类再赋值子类，多层继承要遭罪
+  // yzq := Superman{Human{Name: "尹自强", Sex: 1}, 99}
+
+  // 初始化方式二：先声明子类，然后通过点号逐个赋值
+  //var yzq Superman
+  var yzq = new(Superman)
+  yzq.Name = "尹自强"
+  yzq.Sex = 1
+  yzq.Level = 99
+
+  yzq.Eat()  // Superman.Eat()
+  yzq.Talk() // Human.Talk()
+  yzq.Fly()  // Superman.Fly()
+
+  if result, err := json.Marshal(yzq); err == nil {
+    fmt.Println("Superman =", string(result))
+  }
+}
+
+// Superman Eat
+// Human Talk
+// Superman Fly
+// Superman = {"Name":"尹自强","Sex":1,"Level":99}
 ```
 
 ---
