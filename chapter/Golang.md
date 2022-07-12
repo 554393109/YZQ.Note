@@ -873,6 +873,141 @@ func main() {
 // Superman = {"Name":"尹自强","Sex":1,"Level":99}
 ```
 
+### 多态
+
+```go
+// interface 本质是一个指针
+// 定义接口
+// type interface_name interface {
+//   method_name1 [return_type]
+//   method_name2 [return_type]
+//   // ...
+//   method_nameX [return_type]
+// }
+
+// 定义动物接口IAnimal
+type IAnimal interface {
+  Sleep()          // 定义接口方法Sleep()
+  GetName() string // 定义接口方法GetName()获取名称
+  GetKind() string // 定义接口方法GetKind()获取种类
+}
+
+// -----------------------------------------------------------------
+
+// 定义猫类（必须实现接口全部方法）
+type Cat struct {
+  Name string
+}
+
+// 实现接口方法Sleep()
+func (_animal *Cat) Sleep() {
+  fmt.Printf("%v Sleep\r", _animal.Name)
+}
+
+// 实现接口方法GetName()
+func (_animal *Cat) GetName() string {
+  return _animal.Name
+}
+
+// 实现接口方法GetKind()
+func (_animal *Cat) GetKind() string {
+  return fmt.Sprintf("Animal Kind %T\r", _animal)
+}
+
+// -----------------------------------------------------------------
+
+// 定义老鼠类（必须实现接口全部方法）
+type Mouse struct {
+  Name string
+}
+
+// 实现接口方法Sleep()
+func (_animal *Mouse) Sleep() {
+  fmt.Printf("%v Sleep\r", _animal.Name)
+}
+
+// 实现接口方法GetName()
+func (_animal *Mouse) GetName() string {
+  return _animal.Name
+}
+
+// 实现接口方法GetKind()
+func (_animal *Mouse) GetKind() string {
+  return fmt.Sprintf("Animal Kind %T\r", _animal)
+}
+
+// -----------------------------------------------------------------
+
+// 接口作为参数传递
+func ShowAnimal(_animal IAnimal) {
+  _animal.Sleep()
+  fmt.Println("名称：", _animal.GetName())
+  fmt.Println(_animal.GetKind())
+}
+
+func main() {
+  cat := Cat{Name: "汤姆"}
+  ShowAnimal(&cat)
+
+  fmt.Println("-------------------------")
+
+  var mouse = new(Mouse) // 通过new创建的对象为指针
+  mouse.Name = "杰瑞"
+  ShowAnimal(mouse) // 所以传入该方法时，不需要加前缀&
+}
+
+// 汤姆 Sleep
+// 名称： 汤姆
+// Animal Kind *main.Cat
+// -------------------------
+// 杰瑞 Sleep
+// 名称： 杰瑞
+// Animal Kind *main.Mouse
+```
+
+> 组合接口
+
+```go
+// 定义读接口
+type reader interface {
+  read() string
+}
+
+// 定义写接口
+type writer interface {
+  write() string
+}
+
+// 定义读写接口
+type reader_writer interface {
+  reader
+  writer
+}
+
+// 定义实现类（必须实现接口全部方法）
+type mouse struct{}
+
+// 实现读接口
+func (m mouse) read() string {
+  return "mouse reading..."
+}
+
+// 实现写接口
+func (m *mouse) write() string {
+  return "mouse writing..."
+}
+
+func main() {
+  var rw = new(mouse)
+
+  fmt.Println(rw.read())
+  fmt.Println(rw.write())
+}
+
+// mouse reading...
+// mouse writing...
+```
+
 ---
 
 # 常用命令
