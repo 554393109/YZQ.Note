@@ -16,6 +16,8 @@ $('.pendant, .doc-box-right, .doc-side, .header-wrp, .header_segment, .bread-cru
 
 ```javascript
 // 在华南区块保留广东，移除其他省份[http://www.weather.com.cn/textFC/hn.shtml]
+$('.weather_li, .weather_li_head, .locationSearch, .lqcontentBoxheader, .footer, .conMidtab .conMidtab2:nth-child(odd)').remove();
+
 $('.conMidtab').find('.conMidtab2:eq(2),.conMidtab2:eq(0)').remove();$('.lqcontentBoxheader,.weather_li,.weather_li_head,.locationSearch,.footer').remove();
 ```
 
